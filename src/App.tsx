@@ -57,10 +57,12 @@ function App() {
         </ul>
       </nav>
       <HeroSection />
-      <h1 ref={projectsRef} className={styles.projectsTitle} id="projects">
-        Projects
-      </h1>
+
+      <hr className={`${styles.sectionBreak} ${styles.projectsBreak}`} />
       <div className={styles.projectSection} ref={observerRef1}>
+        <h1 ref={projectsRef} className={styles.projectsTitle} id="projects">
+          Projects
+        </h1>
         <div className={styles.projectWrapper}>
           <div className={styles.projectTxt}>
             <h2 className={styles.projectTools}>
@@ -99,7 +101,7 @@ function App() {
           </div>
         </div>
 
-        <div ref={observerRef2} className={styles.projectWrapper}>
+        <div className={styles.projectWrapper}>
           <div className={styles.projectTxt}>
             <h2 className={styles.projectTools}>
               Tools: TypeScript, React, Express, MongoDB, Socket.io
@@ -120,7 +122,41 @@ function App() {
         </div>
       </div>
 
-      <h1 className={styles.projectsTitle}>Skills</h1>
+      <hr className={`${styles.sectionBreak} ${styles.skillsBreak}`} />
+
+      <div className={styles.skillsSection} ref={observerRef2}>
+        <h1 className={styles.projectsTitle}>Skills</h1>
+        <div className={styles.skillsWrapper}>
+          <div className={styles.skillWrapper}>
+            <h1>Frontend</h1>
+            <ul>
+              <li>React</li>
+              <li>Typescript</li>
+              <li>SCSS</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
+          <div className={styles.skillWrapper}>
+            <h1>Backend</h1>
+            <ul>
+              <li>Express</li>
+              <li>MongoDB</li>
+              <li>Mongoose</li>
+              <li>Socket.io</li>
+              <li></li>
+            </ul>
+          </div>
+          <div className={styles.skillWrapper}>
+            <h1>Soft Skills</h1>
+            <ul>
+              <li>Communication</li>
+              <li>Timely</li>
+              <li>SCSS</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -141,6 +177,9 @@ export const HeroSection = () => {
       </div>
       <div className={styles.heroImgWrapper}>
         <img src={heroImg} className={styles.heroImg} />
+        <div className={`${styles.heroWalker}`}>
+          <div className={`${styles.walker}`}></div>
+        </div>
       </div>
     </div>
   );
