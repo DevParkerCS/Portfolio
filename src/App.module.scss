@@ -1,34 +1,81 @@
 body {
-  background-image: linear-gradient(to bottom, #150734 80vh, #0f2557);
   overflow-x: hidden;
+  background-image: linear-gradient(
+    to bottom,
+    #8f1560,
+    #8f1560,
+    #482866,
+    #482866,
+    #40c0f1,
+    #40c0f1
+  );
+}
+
+nav {
+  width: 100vw;
+  background-color: #622264;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 0px 10px black;
+  z-index: 2;
+  transition: all 0.25s linear;
+
+  &.inFirstObserved {
+    background-color: #482866;
+  }
+  &.inSecObserved {
+    background-color: #40c0f1;
+    a {
+      color: black;
+    }
+  }
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 .heroSection {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5rem;
 }
 
 .heroTxt {
-  width: 45vw;
-  color: #9ac7fc;
-  margin-top: 4rem;
+  width: 50vw;
   cursor: default;
 
   .heroTitle {
-    font-size: 6rem;
+    font-size: 5.5rem;
+    background: linear-gradient(to right, #e6107e, #40c0f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
   }
+
   .heroSubtitle {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
     transition: all 0.35s;
   }
 
   .heroSubtitle:hover {
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #9ac7fc;
+    -webkit-text-stroke-color: white;
     color: transparent;
   }
 
@@ -46,18 +93,16 @@ body {
     width: 50%;
     height: 50%;
     transition: all 0.25s linear;
-    box-shadow: 0px 0px 10px 10px #0ff;
-    border-radius: 50px;
-  }
-
-  .heroImg:hover {
-    box-shadow: 0px 0px 40px 20px #0ff;
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f, -10px 0 80px #f0f,
+      10px 0px 50px #253269;
+    border-radius: 50%;
+    padding: 0.9rem;
   }
 }
 
 .mouseGlow {
   position: absolute;
-  box-shadow: 0px 0px 1200px 50px #0ff;
+  box-shadow: 0px 0px 1200px 50px white;
   border-radius: 50%;
 }
 
@@ -70,20 +115,23 @@ body {
   border-radius: 25px;
 }
 
+.projectsTitle {
+  text-align: center;
+  font-size: 6rem;
+}
+
 .projectWrapper {
   display: flex;
   justify-content: space-between;
   padding: 3rem;
+  margin-top: 3rem;
 }
 
 .projectImgWrapper {
-  width: 50vw;
-  height: 40vw;
+  width: 40vw;
+  height: 30vw;
   overflow: hidden;
   position: relative;
-  background-color: #4b9fe1;
-  border-radius: 25px;
-  box-shadow: 0px 0px 10px 10px #0ff;
   transition: all 0.35s;
   cursor: pointer;
 
@@ -92,6 +140,7 @@ body {
     height: 52%;
     position: absolute;
     transition: all 0.35s;
+    border: 1px solid white;
   }
 
   .topImg {
@@ -110,7 +159,7 @@ body {
       box-shadow: none;
     }
     img {
-      box-shadow: 0px 0px 10px 10px #0ff;
+      box-shadow: 0px 0px 10px 10px white;
     }
     .topImg {
       left: 15%;
@@ -122,9 +171,12 @@ body {
 }
 
 .projectTxt {
-  width: 40vw;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   .projectName {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .projectTools {
     width: 70%;
