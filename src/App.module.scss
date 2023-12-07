@@ -8,6 +8,28 @@ body {
   overflow-x: hidden;
 }
 
+.loadingScreen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  background-color: #4c5c68;
+  animation: fadeLoading 1.5s linear;
+  opacity: 0;
+  pointer-events: none;
+
+  .heroImgWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .heroWalker {
+      animation: rotateWalker 1s ease-out;
+    }
+  }
+}
+
 nav {
   width: 100vw;
   background-color: #4c5c68;
@@ -46,12 +68,16 @@ nav {
   border: none;
   height: 15vh;
   width: 100vw;
+  outline: none;
 
   &.projectsBreak {
     background-image: linear-gradient(to bottom, #4c5c68, #46494c);
   }
   &.skillsBreak {
     background-image: linear-gradient(to bottom, #46494c, #c5c3c6);
+  }
+  &.contactBreak {
+    background-image: linear-gradient(to bottom, #c5c3c6, #4c5c68);
   }
 }
 
@@ -61,7 +87,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem;
+  padding: 0 10rem;
   background-color: #4c5c68;
 }
 
@@ -117,6 +143,7 @@ nav {
     transform-origin: bottom;
     transition: all 3s linear;
     pointer-events: none;
+    animation: rotateWalker 10s linear infinite;
 
     .walker {
       transform: translate(0, -100%);
@@ -126,10 +153,6 @@ nav {
       box-shadow: inset 0 0 10px 5px #1985a1, inset 0px 0 15px 5px #fff,
         0px 0 20px 10px #fff;
     }
-  }
-
-  .heroImg:hover ~ .heroWalker {
-    animation: rotateWalker 10s linear infinite;
   }
 }
 
@@ -148,10 +171,17 @@ nav {
   border-radius: 25px;
 }
 
-.projectsTitle {
+.sectionTitle {
   text-align: center;
-  font-size: 6rem;
-  text-shadow: 0px 5px 5px black;
+  font-size: 10rem;
+  margin: 3rem;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgb(235, 235, 235);
+  color: transparent;
+
+  &.titleDark {
+    -webkit-text-stroke-color: black;
+  }
 }
 
 .projectSection {
@@ -159,6 +189,7 @@ nav {
   flex-direction: column;
   align-items: center;
   background-color: #46494c;
+  padding-bottom: 5rem;
 }
 
 .projectWrapper {
@@ -166,11 +197,12 @@ nav {
   justify-content: space-between;
   margin-top: 3rem;
   width: 90vw;
+  margin-bottom: 3rem;
 }
 
 .projectImgWrapper {
   width: 40vw;
-  height: 30vw;
+  height: 27vw;
   overflow: hidden;
   position: relative;
   transition: all 0.35s;
@@ -178,10 +210,10 @@ nav {
 
   img {
     width: 60%;
-    height: 52%;
     position: absolute;
     transition: all 0.35s;
     border: 1px solid white;
+    box-shadow: 10px 10px 5px black;
   }
 
   .topImg {
@@ -234,12 +266,13 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 4rem;
 }
 
 .skillsWrapper {
   display: flex;
   width: 75vw;
-  background-color: white;
+  background-color: #46494c;
   border-radius: 25px;
   overflow: hidden;
   justify-content: space-between;
@@ -248,10 +281,10 @@ nav {
 }
 
 .skillWrapper {
-  padding: 2rem;
+  margin: 2.5rem;
   h1 {
     font-size: 5rem;
-    color: black;
+    color: white;
     border-bottom: 2px solid #c5c3c6;
   }
   ul {
@@ -259,13 +292,31 @@ nav {
     list-style: square;
   }
   li {
-    color: black;
+    color: rgb(200, 200, 200);
     font-size: 2.5rem;
   }
+}
+
+.contactSection {
+  background-color: #4c5c68;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes rotateWalker {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeLoading {
+  0% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
