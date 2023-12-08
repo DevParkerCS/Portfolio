@@ -1,6 +1,8 @@
 .skillWrapper {
+  overflow: hidden;
   .name {
-    font-size: 5rem;
+    font-size: 4.5rem;
+    text-align: center;
     color: white;
     border-bottom: 2px solid #c5c3c6;
   }
@@ -11,5 +13,47 @@
   .skill {
     color: rgb(200, 200, 200);
     font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .skillWrapper {
+    .name {
+      font-size: 2rem;
+    }
+    .skill {
+      font-size: 1rem;
+    }
+    .skillList {
+      padding: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .skillWrapper {
+    .name {
+      font-size: 2.5rem;
+    }
+    .skill {
+      font-size: 1.25rem;
+    }
+    .skillList {
+      padding: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  .skillWrapper {
+    .name {
+      font-size: 3rem;
+    }
+    .skillList {
+      padding: 1rem;
+    }
+    .skill {
+      font-size: 1.5rem;
+    }
   }
 }

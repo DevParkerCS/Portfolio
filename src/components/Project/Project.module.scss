@@ -49,7 +49,7 @@
 }
 
 .projectTxt {
-  width: 45vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,5 +66,52 @@
     color: #758d97;
     font-size: 1.5rem;
     margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .projectWrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .projectImgWrapper {
+    width: 70vw;
+    height: 47vw;
+  }
+
+  .projectTxt {
+    width: 70vw;
+    .projectName {
+      font-size: 2.5rem;
+    }
+    .projectDesc,
+    .projectTools {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .projectTxt {
+    .projectName {
+      font-size: 3rem;
+    }
+    .projectDesc,
+    .projectTools {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  .projectTxt {
+    .projectName {
+      font-size: 4rem;
+    }
+    .projectDesc,
+    .projectTools {
+      font-size: 1.25rem;
+    }
   }
 }

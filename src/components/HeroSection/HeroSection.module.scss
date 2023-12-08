@@ -4,12 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10rem;
+  padding: 0rem 5vw;
   background-color: #0d1117;
 }
 
 .heroTxt {
-  width: 50vw;
+  width: 60vw;
   cursor: default;
 
   .heroTitle {
@@ -34,8 +34,8 @@
 }
 
 .heroImgWrapper {
-  width: 25%;
-  height: 50%;
+  width: 25vw;
+  height: 25vw;
   display: flex;
   justify-content: center;
   background-color: transparent;
@@ -47,7 +47,10 @@
       inset -20px 0 20px #7140c9, -10px 0 20px #3fb950, 10px 0px 20px #7140c9;
     border-radius: 50%;
     padding: 0.9rem;
+    width: 100%;
+    height: 100%;
   }
+
   .heroWalker {
     height: 50%;
     position: absolute;
@@ -56,6 +59,7 @@
     pointer-events: none;
     animation: rotateWalker 10s linear infinite;
   }
+
   .walker {
     transform: translate(0, -100%);
     width: 25px;
@@ -80,4 +84,89 @@
 
 .projectsBtn:hover {
   box-shadow: inset 0px 0px 10px white;
+}
+
+@media only screen and (max-width: 700px) {
+  .heroSection {
+    flex-direction: column-reverse;
+    height: auto;
+    padding-top: 2rem;
+  }
+
+  .heroTxt {
+    width: 100vw;
+    padding: 0rem 2rem;
+
+    .heroTitle {
+      font-size: 4rem;
+    }
+    .heroSubtitle {
+      font-size: 2.5rem;
+    }
+    .heroDescription {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .heroTxt {
+    .heroTitle {
+      font-size: 4rem;
+    }
+    .heroSubtitle {
+      font-size: 2.5rem;
+    }
+    .heroDescription {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  .heroTxt {
+    .heroTitle {
+      font-size: 5rem;
+    }
+
+    .heroSubtitle {
+      font-size: 3rem;
+    }
+  }
+
+  .projectsBtn {
+    font-size: 1rem;
+  }
+}
+
+@keyframes rotateWalker {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes changeWalkerColor {
+  0% {
+    box-shadow: inset 0 0 20px #fff, inset 20px 0 20px #7140c9,
+      inset -20px 0 20px #7140c9, -10px 0 20px #7140c9, 10px 0px 20px #7140c9;
+  }
+  40% {
+    box-shadow: inset 0 0 20px #fff, inset 20px 0 20px #7140c9,
+      inset -20px 0 20px #7140c9, -10px 0 20px #7140c9, 10px 0px 20px #7140c9;
+  }
+  50% {
+    box-shadow: inset 0 0 20px #fff, inset 20px 0 20px #3fb950,
+      inset -20px 0 20px #3fb950, -10px 0 20px #3fb950, 10px 0px 20px #3fb950;
+  }
+  90% {
+    box-shadow: inset 0 0 20px #fff, inset 20px 0 20px #3fb950,
+      inset -20px 0 20px #3fb950, -10px 0 20px #3fb950, 10px 0px 20px #3fb950;
+  }
+  100% {
+    box-shadow: inset 0 0 20px #fff, inset 20px 0 20px #7140c9,
+      inset -20px 0 20px #7140c9, -10px 0 20px #7140c9, 10px 0px 20px #7140c9;
+  }
 }
