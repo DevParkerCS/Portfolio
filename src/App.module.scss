@@ -61,9 +61,62 @@ body {
 }
 
 .contactSection {
-  background-color: #4c5c68;
+  background-color: #0d1117;
   display: flex;
   flex-direction: column;
+  position: relative;
+  padding: 4rem;
+}
+
+.contactWrapper {
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  background-color: #2f363e;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  padding: 4rem;
+  text-align: center;
+  box-shadow: 0px 0px 20px #3fb950;
+
+  .contactTxt {
+    font-size: 2rem;
+  }
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 20%;
+  background-color: #2f363e;
+  padding: 1.5rem;
+  min-width: 2rem;
+}
+
+.iconBtn {
+  padding: 0.5rem;
+}
+
+.footerSection {
+  background-color: #0d1117;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .iconSection {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid #2f363e;
+    margin-bottom: 2rem;
+  }
+
+  .copyright {
+    font-size: 1.5rem;
+  }
 }
 
 @keyframes rotateWalker {

@@ -8,6 +8,9 @@ import { Skill } from "./components/Skill/Skill";
 import { skills } from "./data/skills";
 import { Nav } from "./components/Nav/Nav";
 import { HeroSection } from "./components/HeroSection/HeroSection";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 type MousePosType = {
   x: number;
@@ -64,9 +67,28 @@ function App() {
         ))}
       </div>
 
-      <hr className={`${styles.sectionBreak} ${styles.contactBreak}`} />
       <div className={styles.contactSection}>
-        <h1 className={styles.sectionTitle}>Contact</h1>
+        <div className={styles.contactWrapper}>
+          <p className={styles.contactTxt}>
+            If you are interested in getting to know me more or have any
+            questions, send me an email below!
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.footerSection}>
+        <div className={styles.iconSection}>
+          <a className={styles.iconBtn}>
+            <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+          </a>
+          <a className={styles.iconBtn}>
+            <FontAwesomeIcon className={styles.icon} icon={faLinkedin} />
+          </a>
+          <a className={styles.iconBtn}>
+            <FontAwesomeIcon className={styles.icon} icon={faEnvelope} />
+          </a>
+        </div>
+        <p className={styles.copyright}>&copy; Parker Phillips 2023</p>
       </div>
     </div>
   );
