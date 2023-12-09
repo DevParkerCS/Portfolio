@@ -5,7 +5,10 @@ export const HeroSection = () => {
   return (
     <div className={styles.heroSection}>
       <div className={styles.heroTxt}>
-        <h1 className={styles.heroTitle}>Hello, I'm Parker.</h1>
+        <h1 className={styles.heroTitle}>
+          Hello,
+          <br className={styles.mobileBreak} /> I'm Parker.
+        </h1>
         <h1 className={styles.heroSubtitle}>Software Developer</h1>
         <h2 className={styles.heroDescription}>
           Computer Science student with passion for learning, and creating

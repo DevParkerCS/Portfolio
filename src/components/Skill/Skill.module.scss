@@ -16,7 +16,29 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 480px) {
+  .skillWrapper {
+    text-wrap: wrap;
+    text-align: center;
+    padding: 0.5rem;
+    .name {
+      font-size: 1.25rem;
+    }
+    .skill {
+      font-size: 1rem;
+      padding: 0.25rem;
+    }
+    .skillList {
+      padding: 0rem;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 700px) {
   .skillWrapper {
     .name {
       font-size: 2rem;
