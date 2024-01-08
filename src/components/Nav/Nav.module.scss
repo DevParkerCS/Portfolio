@@ -1,21 +1,20 @@
 @import "../../App.module.scss";
 
 nav {
-  width: 100vw;
-  background-color: #0d1117;
+  box-shadow: 0px 0px 10px 5px black;
   position: sticky;
   top: 0;
-  box-shadow: 0px 0px 10px 5px black;
+  width: 100vw;
+}
+
+.navContentWrapper {
+  background-color: #0d1117;
   z-index: 100;
   transition: all 0.25s linear;
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
   align-items: center;
-
-  &.inFirstObserved {
-    background-color: #12181f;
-  }
 
   ul {
     display: flex;
@@ -31,25 +30,19 @@ nav {
       text-decoration: none;
     }
   }
-
-  .icon {
-    padding: 0.5rem;
-  }
 }
 
 @media only screen and (max-width: 900px) {
-  nav {
-    ul {
-      position: absolute;
-      flex-direction: column;
-      left: 0;
-      top: 0;
-      background-color: #12181f;
-      height: 100vh;
-      padding: 1rem 3rem;
-      transform: translateX(-100%);
-      transition: all 0.25s linear;
-    }
+  .navContentWrapper {
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    background-color: #12181f;
+    height: 100vh;
+    padding: 1rem 3rem;
+    transform: translateX(-100%);
+    transition: all 0.25s linear;
 
     li {
       padding: 0.5rem;

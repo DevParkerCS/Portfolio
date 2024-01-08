@@ -20,7 +20,7 @@ export const HeroSection = () => {
       </div>
       <div className={styles.heroImgWrapper}>
         <img
-          alt="MERN stack image inside bubble"
+          alt="MERN stack inside bubble"
           src={heroImg}
           className={styles.heroImg}
         />

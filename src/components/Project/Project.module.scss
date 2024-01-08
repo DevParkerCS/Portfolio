@@ -69,6 +69,19 @@
   }
 }
 
+.projectLinks {
+  margin-top: 1.5rem;
+  a {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    color: #98acb4;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .projectWrapper {
     flex-direction: column-reverse;

@@ -1,0 +1,46 @@
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 20%;
+  background-color: #2f363e;
+  padding: 1.5rem;
+  min-width: 2vw;
+}
+
+.iconBtn {
+  padding: 0.5rem;
+}
+
+nav {
+  .icon {
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .icon {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 700px) {
+  .icon {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .icon {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 900) and (max-width: 1199px) {
+  .icon {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}

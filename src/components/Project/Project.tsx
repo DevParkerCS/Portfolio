@@ -12,6 +12,14 @@ export const Project = ({ project }: Props) => {
         <p className={styles.projectTools}>{project.tools}</p>
         <h2 className={styles.projectName}>{project.name}</h2>
         <p className={styles.projectDesc}>{project.description}</p>
+        <div className={styles.projectLinks}>
+          <a href={project.webLink} target="blank">
+            Website
+          </a>
+          <a target="blank" href={project.gitLink}>
+            GitHub Repo
+          </a>
+        </div>
       </div>
       <div className={styles.projectImgWrapper}>
         <img

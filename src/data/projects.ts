@@ -11,6 +11,8 @@ export type TProject = {
   description: string;
   imgTop: string;
   imgBottom: string;
+  gitLink: string;
+  webLink: string;
 };
 
 export const projects: TProject[] = [
@@ -21,6 +23,8 @@ export const projects: TProject[] = [
       "2D web game that incorporates a singeplayer and multiplayer gamemode. Real-time leaderboard that keeps track of the top 10 scores of all time. Most recent full-stack project.",
     imgTop: galacticHome,
     imgBottom: galacticGame,
+    gitLink: "https://github.com/DevParkerCS/Galactic-Shooter",
+    webLink: "https://galactic-shooter.onrender.com/",
   },
   {
     tools: "React, Typescript, SCSS",
@@ -29,6 +33,8 @@ export const projects: TProject[] = [
       "This is my most recent static Frontend project. If you'd like you can check out my github repository for this page below!",
     imgTop: portfolio1,
     imgBottom: portfolio2,
+    gitLink: "https://github.com/DevParkerCS/Portfolio",
+    webLink: "pphillips.dev",
   },
   {
     name: "What The Sort",
@@ -37,5 +43,7 @@ export const projects: TProject[] = [
       " A sorting visualizer that helps students visualize different sorting algorithms in Computer Science. Created for students like me that can have a hard time visualizing complex ideas in class.",
     imgTop: whatSort1,
     imgBottom: whatSort2,
+    gitLink: "https://github.com/DevParkerCS/WhatTheSort",
+    webLink: "https://main.d3or1kkvm9vtt4.amplifyapp.com/",
   },
 ];
