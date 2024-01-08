@@ -1,10 +1,15 @@
 @import "../../App.module.scss";
 
 nav {
-  box-shadow: 0px 0px 10px 5px black;
+  box-shadow: 0px 0px 10px 5px #000000;
   position: sticky;
   top: 0;
   width: 100vw;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: none;
 }
 
 .navContentWrapper {
@@ -33,6 +38,24 @@ nav {
 }
 
 @media only screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    transform: rotate(0deg);
+    transition: all 0.25s;
+  }
+
+  .hamburger.active {
+    transform: rotate(90deg);
+  }
+
+  nav {
+    display: flex;
+    justify-content: end;
+    background-color: #12181f;
+  }
+
   .navContentWrapper {
     position: absolute;
     flex-direction: column;
@@ -44,12 +67,16 @@ nav {
     transform: translateX(-100%);
     transition: all 0.25s linear;
 
+    ul {
+      flex-direction: column;
+    }
+
     li {
       padding: 0.5rem;
       font-size: 1.5rem;
     }
 
-    &:hover ul {
+    &.active {
       transform: translateX(0%);
     }
   }
