@@ -13,26 +13,34 @@ export const Project = ({ project }: Props) => {
         <h2 className={styles.projectName}>{project.name}</h2>
         <p className={styles.projectDesc}>{project.description}</p>
         <div className={styles.projectLinks}>
-          <a href={project.webLink} target="blank">
-            Website
-          </a>
-          <a target="blank" href={project.gitLink}>
-            GitHub Repo
-          </a>
+          {project.webLink && (
+            <a href={project.webLink} target="blank">
+              Website
+            </a>
+          )}
+          {project.gitLink && (
+            <a target="blank" href={project.gitLink}>
+              GitHub Repo
+            </a>
+          )}
         </div>
       </div>
-      <div className={styles.projectImgWrapper}>
+      <a
+        href={project.gitLink}
+        target="blank"
+        className={styles.projectImgWrapper}
+      >
         <img
-          alt="Galactic Shooter home page"
+          alt="First project page"
           className={styles.topImg}
           src={project.imgTop}
         />
         <img
-          alt="Galactic Shooter in game"
+          alt="Second project page"
           className={styles.bottomImg}
           src={project.imgBottom}
         />
-      </div>
+      </a>
     </div>
   );
 };
