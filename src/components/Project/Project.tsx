@@ -26,7 +26,7 @@ export const Project = ({ project }: Props) => {
         </div>
       </div>
       <a
-        href={project.gitLink}
+        href={project.webLink || project.gitLink}
         target="blank"
         className={styles.projectImgWrapper}
       >

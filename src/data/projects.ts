@@ -13,7 +13,7 @@ export type TProject = {
   description: string;
   imgTop: string;
   imgBottom: string;
-  gitLink?: string;
+  gitLink: string;
   webLink?: string;
 };
 
