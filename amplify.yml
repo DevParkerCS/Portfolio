@@ -1,18 +1,19 @@
 version: 1
+
+runtime-versions:
+  nodejs: 20
+
 frontend:
   phases:
     preBuild:
       commands:
-        - nvm install 20
-        - nvm use 20
-        - corepack enable || true
-        # pick ONE package manager; remove the other lockfile to avoid warnings
-        - if [ -f package-lock.json ]; then npm ci; else yarn install --frozen-lockfile || yarn install; fi
+        - corepack enable
+        - yarn install --frozen-lockfile || yarn install
     build:
       commands:
         - echo "CI=false" >> $BASH_ENV
         - source $BASH_ENV
-        - if [ -f package-lock.json ]; then npm run build; else yarn build; fi
+        - yarn build
   artifacts:
     baseDirectory: build
     files:
