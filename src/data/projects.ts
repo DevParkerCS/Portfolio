@@ -4,8 +4,8 @@ import whatSort1 from "../assets/whatsort1.jpg";
 import whatSort2 from "../assets/whatsort2.jpg";
 import portfolio1 from "../assets/portfolio1.jpg";
 import portfolio2 from "../assets/portfolio2.jpg";
-import golfhub1 from "../assets/golfhub1.png";
-import golfhub2 from "../assets/golfhub2.png";
+import poker1 from "../assets/pokerboard.png";
+import poker2 from "../assets/PhonePkr.png";
 
 export type TProject = {
   name: string;
@@ -19,13 +19,13 @@ export type TProject = {
 
 export const projects: TProject[] = [
   {
-    name: "GolfHub Social",
-    tools: "TypeScript, React, Express, MongoDB",
+    name: "TV Poker",
+    tools: "Unity, C#, React, TypeScript, Socket.IO",
     description:
-      "This is my most recent full stack project.  I am developing a golf social media platform which allows users to create profiles, add golf scores, browse courses and other users, and track their stats.  In Progress: Responsiveness only works for large monitors, and adding reviews doesn't work yet.",
-    imgTop: golfhub1,
-    imgBottom: golfhub2,
-    gitLink: "https://github.com/DevParkerCS/GolfSocial",
+      "Multiplayer party poker game designed for computers and mobile. Players connect with their phones to play poker together on a shared computer screen. In Progress",
+    imgTop: poker1,
+    imgBottom: poker2,
+    gitLink: "https://github.com/DevParkerCS/TVPokerGame",
   },
   {
     name: "Galactic Shooter",

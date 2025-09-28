@@ -4,6 +4,7 @@ import { NavIconBtn } from "../NavIconBtn/NavIconBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import resume from "../../assets/CSResumeReal.pdf";
 
 export const Nav = () => {
   const [navActive, setNavActive] = useState(false);
@@ -20,23 +21,18 @@ export const Nav = () => {
         }`}
       >
         <ul>
-          <li onClick={handleClick}>
-            <a href="#projects">Projects</a>
-          </li>
-          <li onClick={handleClick}>
+          <li>
             <a href="#skills">Skills</a>
           </li>
-          <li onClick={handleClick}>
-            <a
-              href={
-                "https://docs.google.com/document/d/1OGxM6OiVmrtK8TVMlXY8sqoqXOVF5lIHnuf5VTj4UZU/view"
-              }
-              target="blank"
-            >
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href={resume} target="_blank" rel="noopener noreferrer">
               Resume
             </a>
           </li>
-          <li onClick={handleClick}>
+          <li>
             <a href="#contact">Contact</a>
           </li>
         </ul>
