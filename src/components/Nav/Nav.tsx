@@ -28,7 +28,11 @@ export const Nav = () => {
             <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href={resume} target="_blank" rel="noopener noreferrer">
+            <a
+              href="/CSResumeReal.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Resume
             </a>
           </li>
