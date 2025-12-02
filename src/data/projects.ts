@@ -4,8 +4,8 @@ import whatSort1 from "../assets/whatsort1.jpg";
 import whatSort2 from "../assets/whatsort2.jpg";
 import portfolio1 from "../assets/portfolio1.jpg";
 import portfolio2 from "../assets/portfolio2.jpg";
-import poker1 from "../assets/pokerboard.png";
-import poker2 from "../assets/PhonePkr.png";
+import ptcQuiz from "../assets/PTCQuiz.jpg";
+import ptcContent from "../assets/PTCContent.jpg";
 
 export type TProject = {
   name: string;
@@ -19,13 +19,14 @@ export type TProject = {
 
 export const projects: TProject[] = [
   {
-    name: "TV Poker",
-    tools: "Unity, C#, React, TypeScript, Socket.IO",
+    name: "PassThatClass",
+    tools: "React, TypeScript, OpenAI, Google Vision API, Express",
     description:
-      "Multiplayer party poker game designed for computers and mobile. Players connect with their phones to play poker together on a shared computer screen. In Progress",
-    imgTop: poker1,
-    imgBottom: poker2,
-    gitLink: "https://github.com/DevParkerCS/TVPokerGame",
+      "PassThatClass is a web-based study companion that turns your class notes into AI-generated quizzes, helping you go from raw lecture material to targeted practice in seconds. It combines OCR, OpenAI, and a clean class-centric dashboard so students can organize courses, upload notes (text or images), and track their study progress all in one place.",
+    imgTop: ptcQuiz,
+    imgBottom: ptcContent,
+    gitLink: "https://github.com/DevParkerCS/PassThatClass",
+    webLink: "https://main.ddqp7bpjh9q19.amplifyapp.com/",
   },
   {
     name: "Galactic Shooter",
