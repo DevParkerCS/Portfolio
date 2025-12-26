@@ -25,8 +25,8 @@ export const projects: TProject[] = [
       "PassThatClass is a web-based study companion that turns your class notes into AI-generated quizzes, helping you go from raw lecture material to targeted practice in seconds. It combines OCR, OpenAI, and a clean class-centric dashboard so students can organize courses, upload notes (text or images), and track their study progress all in one place.",
     imgTop: ptcQuiz,
     imgBottom: ptcContent,
-    gitLink: "https://github.com/DevParkerCS/PassThatClass",
-    webLink: "https://main.ddqp7bpjh9q19.amplifyapp.com/",
+    webLink: "https://passthatclass.com",
+    gitLink: "https://passthatclass.com",
   },
   {
     name: "Galactic Shooter",
